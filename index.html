@@ -191,18 +191,26 @@
   }
 
   /* projects */
-  .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .project {
-    padding: 28px; border-radius: 26px 26px 26px 6px;
+    padding: 30px; border-radius: 26px 26px 26px 6px;
     display: flex; flex-direction: column; justify-content: space-between;
-    min-height: 220px;
+    min-height: 240px;
   }
-  .project:nth-child(1) { background: var(--blue); color: #fff; }
-  .project:nth-child(2) { background: var(--mint); }
-  .project:nth-child(3) { background: var(--white); border: 2px dashed var(--muted); }
+  .project:nth-child(1) { background: var(--mint); grid-column: 1 / -1; min-height: 200px; }
+  .project:nth-child(1) p { max-width: 62ch; }
+  .project:nth-child(2) { background: var(--blue); color: #fff; }
+  .project:nth-child(3) { background: var(--yellow); }
+  .project:nth-child(4) { background: #cfd7ff; }
+  .project:nth-child(5) { background: var(--white); border: 2px dashed var(--muted); }
   .project h3 { font-family: var(--display); font-size: 1.45rem; line-height: 1.15; margin-bottom: 10px; }
   .project p { font-size: 0.98rem; opacity: .92; }
-  .project em { font-style: normal; font-weight: 700; font-size: 0.88rem; margin-top: 22px; }
+  .project em {
+    font-style: normal; font-weight: 700; font-size: 0.88rem; margin-top: 22px;
+    align-self: flex-start; padding: 3px 14px; border-radius: 999px;
+    background: rgba(255, 255, 255, .85); color: var(--ink);
+  }
+  .project:nth-child(5) em { background: var(--bg); }
 
   /* contact */
   .contact {
@@ -327,6 +335,8 @@
         <div class="chip">SQL</div>
         <div class="chip">Web security (basics)</div>
         <div class="chip">Git &amp; GitHub</div>
+        <div class="chip">AI tools</div>
+        <div class="chip">Game development</div>
       </div>
     </div>
 
@@ -389,10 +399,24 @@
     <div class="project-grid">
       <div class="project">
         <div>
-          <h3>Portfolio website</h3>
-          <p>My personal portfolio, built with HTML and CSS and hosted on Netlify.</p>
+          <h3>Smart irrigation system</h3>
+          <p>A team project for farmers to monitor plant quality. We built it end to end, from A to Z, and added extra features on top to make it more useful in the field.</p>
         </div>
-        <em>You're looking at it</em>
+        <em>Team project</em>
+      </div>
+      <div class="project">
+        <div>
+          <h3>Student test website</h3>
+          <p>Built for students who struggle in their subjects. A short 15-minute quiz checks whether they have really understood a concept, so they know what to revisit.</p>
+        </div>
+        <em>Built</em>
+      </div>
+      <div class="project">
+        <div>
+          <h3>Backrooms Escape</h3>
+          <p>A game where you find your way out of the endless backrooms. Designed and built by me, and still being polished before its launch.</p>
+        </div>
+        <em>Launching soon</em>
       </div>
       <div class="project">
         <div>
@@ -403,10 +427,10 @@
       </div>
       <div class="project">
         <div>
-          <h3>More coming soon</h3>
-          <p>New projects are always in the works. Check back soon.</p>
+          <h3>Portfolio website</h3>
+          <p>My personal portfolio, built with HTML and CSS and hosted on Netlify.</p>
         </div>
-        <em>In progress</em>
+        <em>You're looking at it</em>
       </div>
     </div>
   </div>
